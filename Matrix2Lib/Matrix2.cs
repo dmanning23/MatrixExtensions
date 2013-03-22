@@ -41,6 +41,8 @@ namespace MatrixLib
 
 		/// <summary>
 		/// Get or set the position component of this matrix
+		/// yo watch out... teh get property allocates another vector on the stack :P
+		/// use the GetPos(ref Vector2) method instead, whenever possible.
 		/// </summary>
 		public Vector2 Pos
 		{
@@ -155,6 +157,16 @@ namespace MatrixLib
 			m_fE[6] = 0.0f;
 			m_fE[7] = 0.0f;
 			m_fE[8] = 1.0f;
+		}
+
+		/// <summary>
+		/// Get the position element of this matrxi without allocating new memory for one
+		/// </summary>
+		/// <param name="vect">a vector to push the position data into</param>
+		public void GetPos(ref Vector2 vect)
+		{
+			vect.X = XPos;
+			vect.Y = YPos;
 		}
 
 		#endregion
