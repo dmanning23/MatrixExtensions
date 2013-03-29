@@ -6,7 +6,7 @@ namespace MatrixLib
 	/// <summary>
 	/// A super simple 2d matrix class.
 	/// </summary>
-	public struct Matrix2
+	public class Matrix2
 	{
 		#region Members
 
