@@ -38,8 +38,8 @@ namespace MatrixExtensions
 		public static Vector2 Mutliply(this Matrix mat1, Vector2 vect1)
 		{
 			return new Vector2(
-				((mat1.M11 * vect1.X) + (mat1.M12 * vect1.Y) + mat1.M13),
-				((mat1.M21 * vect1.X) + (mat1.M22 * vect1.Y) + mat1.M23));
+				((mat1.M11 * vect1.X) + (mat1.M12 * vect1.Y) + mat1.M41),
+				((mat1.M21 * vect1.X) + (mat1.M22 * vect1.Y) + mat1.M42));
 		}
 
 		/// <summary>
