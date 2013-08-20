@@ -6,7 +6,7 @@ namespace MatrixExtensions
 	/// <summary>
 	/// A super simple 2d matrix class.
 	/// </summary>
-	public static class MatrixExtensions
+	public static class MatrixExt
 	{
 		#region Methods
 
@@ -49,6 +49,16 @@ namespace MatrixExtensions
 		public static void SetOrientation(this Matrix mat1, float fAng)
 		{
 			mat1 = Orientation(fAng);
+		}
+
+		public static void XPos(this Matrix mat1, float x)
+		{
+			mat1.M41 = x;
+		}
+
+		public static void YPos(this Matrix mat1, float y)
+		{
+			mat1.M42 = y;
 		}
 
 		#endregion
