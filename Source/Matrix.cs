@@ -37,6 +37,7 @@ namespace MatrixExtensions
 		/// <returns>a new matrix that is the result of the matrix * vector</returns>
 		public static Vector2 Mutliply(this Matrix mat1, Vector2 vect1)
 		{
+			//TODO: create test for orientation matrix...  i bet mat1.M12 & mat1.m21 need to be swapped here
 			return new Vector2(
 				((mat1.M11 * vect1.X) + (mat1.M12 * vect1.Y) + mat1.M41),
 				((mat1.M21 * vect1.X) + (mat1.M22 * vect1.Y) + mat1.M42));
