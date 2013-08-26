@@ -14,19 +14,19 @@ namespace MatrixExtensions
 		{
 			Matrix result = Matrix.CreateRotationZ(radians);
 
-			//Idunno why monogame flips the matrix around... prolly some shit to do with the y axis being flipped?
-			result.M12 *= -1.0f;
-			result.M21 *= -1.0f;
+//			//Idunno why monogame flips the matrix around... prolly some shit to do with the y axis being flipped?
+//			result.M12 *= -1.0f;
+//			result.M21 *= -1.0f;
 			return result;
 		}
 
 		public static void Orientation(float radians, out Matrix result)
 		{
 			Matrix.CreateRotationZ(radians, out result);
-
-			//Idunno why monogame flips the matrix around... prolly some shit to do with the y axis being flipped?
-			result.M12 *= -1.0f;
-			result.M21 *= -1.0f;
+//
+//			//Idunno why monogame flips the matrix around... prolly some shit to do with the y axis being flipped?
+//			result.M12 *= -1.0f;
+//			result.M21 *= -1.0f;
 		}
 
 		/// <summary>
@@ -37,10 +37,10 @@ namespace MatrixExtensions
 		/// <returns>a new matrix that is the result of the matrix * vector</returns>
 		public static Vector2 Mutliply(this Matrix mat1, Vector2 vect1)
 		{
-			//TODO: create test for orientation matrix...  i bet mat1.M12 & mat1.m21 need to be swapped here
+			//TODO: create test for orientation matrix...  check if mat1.M12 & mat1.m21 need to be swapped here
 			return new Vector2(
-				((mat1.M11 * vect1.X) + (mat1.M12 * vect1.Y) + mat1.M41),
-				((mat1.M21 * vect1.X) + (mat1.M22 * vect1.Y) + mat1.M42));
+				((mat1.M11 * vect1.X) + (mat1.M21 * vect1.Y) + mat1.M41),
+				((mat1.M12 * vect1.X) + (mat1.M22 * vect1.Y) + mat1.M42));
 		}
 
 		/// <summary>
