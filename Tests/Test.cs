@@ -16,7 +16,23 @@ namespace MatrixExtensions
 		[Test()]
 		public void Orientation()
 		{
+			Matrix rotation = MatrixExt.Orientation(MathHelper.ToRadians(90));
 
+			Vector2 dude = new Vector2(1.0f, 0.0f);
+			Vector2 result = rotation.Mutliply(dude);
+			Assert.AreEqual(0, (int)(result.X + 0.5f));
+			Assert.AreEqual(1, (int)(result.Y + 0.5f));
+		}
+
+		[Test()]
+		public void Orientation2()
+		{
+			Matrix rotation = MatrixExt.Orientation(MathHelper.ToRadians(-90));
+
+			Vector2 dude = new Vector2(1.0f, 0.0f);
+			Vector2 result = rotation.Mutliply(dude);
+			Assert.AreEqual(0, Convert.ToInt32(result.X));
+			Assert.AreEqual(-1, Convert.ToInt32(result.Y));
 		}
 
 		[Test()]
