@@ -36,6 +36,18 @@ namespace MatrixExtensions
 		}
 
 		[Test()]
+		public void Orientation3()
+		{
+			Matrix rotation = Matrix.Identity;
+			MatrixExt.Orientation(MathHelper.ToRadians(-90), out rotation);
+
+			Vector2 dude = new Vector2(1.0f, 0.0f);
+			Vector2 result = rotation.Mutliply(dude);
+			Assert.AreEqual(0, Convert.ToInt32(result.X));
+			Assert.AreEqual(-1, Convert.ToInt32(result.Y));
+		}
+
+		[Test()]
 		public void VectMultiply()
 		{
 			//create a scale matrix
