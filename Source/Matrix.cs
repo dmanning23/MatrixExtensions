@@ -34,14 +34,10 @@ namespace MatrixExtensions
 				((mat1.M12 * vect1.X) + (mat1.M22 * vect1.Y) + mat1.M42));
 		}
 
-		public static void XPos(this Matrix mat1, float x)
+		public static void SetPosition(ref Matrix mat1, Vector2 pos)
 		{
-			mat1.M41 = x;
-		}
-
-		public static void YPos(this Matrix mat1, float y)
-		{
-			mat1.M42 = y;
+			mat1.M41 = pos.X;
+			mat1.M42 = pos.Y;
 		}
 
 		#endregion
