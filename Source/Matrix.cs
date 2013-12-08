@@ -21,7 +21,7 @@ namespace MatrixExtensions
 		}
 
 		/// <summary>
-		/// vector multipl
+		/// vector multiply
 		/// </summary>
 		/// <param name="mat1">the matrix to multiply</param>
 		/// <param name="vect1">the vector to multiply by</param>
