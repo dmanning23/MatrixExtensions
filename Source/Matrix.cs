@@ -39,6 +39,54 @@ namespace MatrixExtensions
 			mat1.M42 = pos.Y;
 		}
 
+		/// <summary>
+		/// Transforms a vector from world space to the agent's local space
+		/// </summary>
+		public static Vector2 ToLocalSpace(this Vector2 point, Vector2 agentHeading, Vector2 agentSide, Vector2 agentPosition)
+		{
+			//create a transformation matrix
+			Matrix matTransform = Orientation(agentHeading, agentSide);
+
+			//set the transformation 
+			float tx = -Vector2.Dot(agentPosition, agentHeading);
+			float ty = -Vector2.Dot(agentPosition, agentSide);
+			matTransform.M41 = tx;
+			matTransform.M42 = ty;
+
+			//now transform the vertices
+			return matTransform.Multiply(point);
+		}
+
+		/// <summary>
+		/// create a rotation matrix from a 2D vector
+		/// </summary>
+		/// <param name="fwd"></param>
+		/// <param name="side"></param>
+		public static Matrix Orientation(Vector2 fwd, Vector2 side)
+		{
+			Matrix result = Matrix.Identity;
+
+			result.M11 = fwd.X;
+			result.M12 = fwd.Y;
+
+			result.M21 = side.X;
+			result.M22 = side.Y;
+
+			return result;
+		}
+
+		/// <summary>
+		/// Transforms a vector from the agent's local space into world space
+		/// </summary>
+		public static Vector2 ToWorldSpace(this Vector2 vec, Vector2 agentHeading, Vector2 agentSide)
+		{
+			//create a transformation matrix
+			Matrix matTransform = Orientation(agentHeading, agentSide);
+
+			//now transform the vertex
+			return matTransform.Multiply(vec);
+		}
+
 		#endregion
 	}
 }
