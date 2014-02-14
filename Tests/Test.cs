@@ -107,6 +107,50 @@ namespace MatrixExtensions
 		}
 
 		[Test]
+		public void Orientations()
+		{
+			//create his heading 180
+			Vector2 dudeHeading = -Vector2.UnitX;
+
+			//create his side matrix
+			Vector2 dudeSide = new Vector2(-dudeHeading.Y, dudeHeading.X);
+
+			//create an orientation matrix
+			Matrix rotate = MatrixExt.Orientation(dudeHeading, dudeSide);
+
+			//that should be identity
+			Matrix rotate1 = MatrixExt.Orientation(MathHelper.ToRadians(-180.0f));
+			for (int i = 0; i < Matrix.ToFloatArray(rotate).Length; i++)
+			{
+				float expected = (float)Math.Round(Matrix.ToFloatArray(rotate1)[i], 3);
+				float actual = (float)Math.Round(Matrix.ToFloatArray(rotate)[i], 3);
+				Assert.AreEqual(expected, actual, string.Format("incorrect index at {0}", i));
+			}
+		}
+
+		[Test]
+		public void Orientations_1()
+		{
+			//create his heading -90
+			Vector2 dudeHeading = new Vector2(0.0f, 1.0f);
+
+			//create his side matrix
+			Vector2 dudeSide = new Vector2(-dudeHeading.Y, dudeHeading.X);
+
+			//create an orientation matrix
+			Matrix rotate = MatrixExt.Orientation(dudeHeading, dudeSide);
+
+			//that should be identity
+			Matrix rotate1 = MatrixExt.Orientation(MathHelper.ToRadians(-90.0f));
+			for (int i = 0; i < Matrix.ToFloatArray(rotate).Length; i++)
+			{
+				float expected = (float)Math.Round(Matrix.ToFloatArray(rotate1)[i], 3);
+				float actual = (float)Math.Round(Matrix.ToFloatArray(rotate)[i], 3);
+				Assert.AreEqual(expected, actual, string.Format("incorrect index at {0}", i));
+			}
+		}
+
+		[Test]
 		public void OrientationFromHeadingAndSide()
 		{
 			//create his heading
@@ -119,7 +163,7 @@ namespace MatrixExtensions
 			Matrix rotate = MatrixExt.Orientation(dudeHeading, dudeSide);
 
 			//that should be identity
-			Assert.AreEqual(rotate, Matrix.Identity);
+			Assert.AreEqual(Matrix.Identity, rotate);
 		}
 
 		[Test]
@@ -136,12 +180,74 @@ namespace MatrixExtensions
 
 			//rotate a point
 			Vector2 point = rotate.Multiply(new Vector2(100.0f, 100.0f));
-			Assert.AreEqual(100.0f, Math.Round(point.X, 3));
-			Assert.AreEqual(-100.0f, Math.Round(point.Y, 3));
+			Assert.AreEqual(-100.0f, Math.Round(point.X, 3));
+			Assert.AreEqual(100.0f, Math.Round(point.Y, 3));
 		}
 
 		[Test]
-		public void ToLocal()
+		public void OrientationFromHeadingAndSide_2()
+		{
+			//create his heading
+			Vector2 dudeHeading = -Vector2.UnitY;
+
+			//create his side matrix
+			Vector2 dudeSide = new Vector2(-dudeHeading.Y, dudeHeading.X);
+
+			//create an orientation matrix
+			Matrix rotate = MatrixExt.Orientation(dudeHeading, dudeSide);
+
+			//rotate a point
+			Vector2 point = rotate.Multiply(new Vector2(100.0f, 110.0f));
+			Assert.AreEqual(-110.0f, Math.Round(point.X, 3));
+			Assert.AreEqual(100.0f, Math.Round(point.Y, 3));
+		}
+
+		[Test]
+		public void OrientationFromHeadingAndSide_3()
+		{
+			//create his heading
+			Vector2 dudeHeading = Vector2.UnitX;
+
+			//create his side matrix
+			Vector2 dudeSide = new Vector2(-dudeHeading.Y, dudeHeading.X);
+
+			//create an orientation matrix
+			Matrix rotate = MatrixExt.Orientation(dudeHeading, dudeSide);
+
+
+			//create a dude
+			Vector2 dudePos = new Vector2(100.0f, 100.0f);
+
+			//convert another point to "local space"
+			Vector2 myPoint = new Vector2(100.0f, 110.0f);
+
+			myPoint = myPoint - dudePos;
+			myPoint = rotate.Multiply(myPoint);
+
+			Assert.AreEqual(0.0f, Math.Round(myPoint.X, 3));
+			Assert.AreEqual(10.0f, Math.Round(myPoint.Y, 3));
+		}
+
+		[Test]
+		public void OrientationFromHeadingAndSide_4()
+		{
+			//create his heading
+			Vector2 dudeHeading = -Vector2.UnitY;
+
+			//create his side matrix
+			Vector2 dudeSide = new Vector2(-dudeHeading.Y, dudeHeading.X);
+
+			//create an orientation matrix
+			Matrix rotate = MatrixExt.Orientation(dudeHeading, dudeSide);
+
+			Vector2 myPoint = rotate.Multiply(new Vector2(0.0f, 10.0f));
+
+			Assert.AreEqual(-10.0f, Math.Round(myPoint.X, 3));
+			Assert.AreEqual(0.0f, Math.Round(myPoint.Y, 3));
+		}
+
+		[Test]
+		public void ToLocal_Identity()
 		{
 			//create a dude
 			Vector2 dudePos = new Vector2(100.0f, 100.0f);
@@ -162,7 +268,7 @@ namespace MatrixExtensions
 		}
 
 		[Test]
-		public void ToLocal1()
+		public void ToLocal_Identity1()
 		{
 			//create a dude
 			Vector2 dudePos = new Vector2(100.0f, 100.0f);
@@ -238,6 +344,27 @@ namespace MatrixExtensions
 
 			//convert another point to "local space"
 			Vector2 myPoint = new Vector2(200.0f, 300.0f);
+
+			myPoint = myPoint.ToLocalSpace(dudeHeading, dudeSide, dudePos);
+
+			Assert.AreEqual(100.0f, Math.Round(myPoint.X, 3));
+			Assert.AreEqual(50.0f, Math.Round(myPoint.Y, 3));
+		}
+
+		[Test]
+		public void ToLocal_Identity2()
+		{
+			//create a dude
+			Vector2 dudePos = new Vector2(150.0f, 400.0f);
+
+			//create his heading
+			Vector2 dudeHeading = new Vector2(1.0f, 0.0f);
+
+			//create his side matrix
+			Vector2 dudeSide = new Vector2(-dudeHeading.Y, dudeHeading.X);
+
+			//convert another point to "local space"
+			Vector2 myPoint = new Vector2(250.0f, 450.0f);
 
 			myPoint = myPoint.ToLocalSpace(dudeHeading, dudeSide, dudePos);
 

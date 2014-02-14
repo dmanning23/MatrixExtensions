@@ -48,7 +48,7 @@ namespace MatrixExtensions
 			Matrix rotation = Orientation(agentHeading, agentSide);
 
 			//now transform the vertices
-			return rotation.Multiply(agentPosition - point);
+			return rotation.Multiply(point - agentPosition);
 		}
 
 		/// <summary>
@@ -61,9 +61,9 @@ namespace MatrixExtensions
 			Matrix result = Matrix.Identity;
 
 			result.M11 = fwd.X;
-			result.M12 = fwd.Y;
+			result.M21 = fwd.Y;
 
-			result.M21 = side.X;
+			result.M12 = side.X;
 			result.M22 = side.Y;
 
 			return result;
