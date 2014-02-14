@@ -47,13 +47,8 @@ namespace MatrixExtensions
 			//create a rotation matrix
 			Matrix rotation = Orientation(agentHeading, agentSide);
 
-			//create a translation matrix
-			Matrix translation = Matrix.CreateTranslation(-agentPosition.X, -agentPosition.Y, 0.0f);
-
-			Matrix local = translation * rotation;
-
 			//now transform the vertices
-			return local.Multiply(point);
+			return rotation.Multiply(agentPosition - point);
 		}
 
 		/// <summary>

@@ -93,10 +93,10 @@ namespace MatrixExtensions
 		public void TranslateScaleMultiply()
 		{
 			//create a scale matrix
-			Matrix translation = Matrix.CreateTranslation(2.0f, 1.0f, 100.0f);
+			Matrix translation = Matrix.CreateTranslation(2.0f, 1.0f, 0.0f);
 
 			//create a scale matrix
-			Matrix scale = Matrix.CreateScale(4.0f, 3.0f, 100.0f);
+			Matrix scale = Matrix.CreateScale(4.0f, 3.0f, 0.0f);
 
 			//multiply a vector
 			Vector2 result = (translation * scale).Multiply(new Vector2(3.0f, 2.0f));
@@ -162,6 +162,27 @@ namespace MatrixExtensions
 		}
 
 		[Test]
+		public void ToLocal1()
+		{
+			//create a dude
+			Vector2 dudePos = new Vector2(100.0f, 100.0f);
+
+			//create his heading
+			Vector2 dudeHeading = Vector2.UnitX;
+
+			//create his side matrix
+			Vector2 dudeSide = new Vector2(-dudeHeading.Y, dudeHeading.X);
+
+			//convert another point to "local space"
+			Vector2 myPoint = new Vector2(100.0f, 90.0f);
+
+			myPoint = myPoint.ToLocalSpace(dudeHeading, dudeSide, dudePos);
+
+			Assert.AreEqual(0.0f, Math.Round(myPoint.X, 3));
+			Assert.AreEqual(-10.0f, Math.Round(myPoint.Y, 3));
+		}
+
+		[Test]
 		public void ToLocal_1()
 		{
 			//create a dude
@@ -178,8 +199,50 @@ namespace MatrixExtensions
 
 			myPoint = myPoint.ToLocalSpace(dudeHeading, dudeSide, dudePos);
 
-			Assert.AreEqual(10.0f, Math.Round(myPoint.X, 3));
+			Assert.AreEqual(-10.0f, Math.Round(myPoint.X, 3));
 			Assert.AreEqual(0.0f, Math.Round(myPoint.Y, 3));
+		}
+
+		[Test]
+		public void ToLocal_2()
+		{
+			//create a dude
+			Vector2 dudePos = new Vector2(100.0f, 100.0f);
+
+			//create his heading
+			Vector2 dudeHeading = new Vector2(0.0f, -1.0f);
+
+			//create his side matrix
+			Vector2 dudeSide = new Vector2(-dudeHeading.Y, dudeHeading.X);
+
+			//convert another point to "local space"
+			Vector2 myPoint = new Vector2(110.0f, 110.0f);
+
+			myPoint = myPoint.ToLocalSpace(dudeHeading, dudeSide, dudePos);
+
+			Assert.AreEqual(-10.0f, Math.Round(myPoint.X, 3));
+			Assert.AreEqual(10.0f, Math.Round(myPoint.Y, 3));
+		}
+
+		[Test]
+		public void ToLocal_3()
+		{
+			//create a dude
+			Vector2 dudePos = new Vector2(150.0f, 400.0f);
+
+			//create his heading
+			Vector2 dudeHeading = new Vector2(0.0f, -1.0f);
+
+			//create his side matrix
+			Vector2 dudeSide = new Vector2(-dudeHeading.Y, dudeHeading.X);
+
+			//convert another point to "local space"
+			Vector2 myPoint = new Vector2(200.0f, 300.0f);
+
+			myPoint = myPoint.ToLocalSpace(dudeHeading, dudeSide, dudePos);
+
+			Assert.AreEqual(100.0f, Math.Round(myPoint.X, 3));
+			Assert.AreEqual(50.0f, Math.Round(myPoint.Y, 3));
 		}
 	}
 }
