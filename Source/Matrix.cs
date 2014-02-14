@@ -44,17 +44,16 @@ namespace MatrixExtensions
 		/// </summary>
 		public static Vector2 ToLocalSpace(this Vector2 point, Vector2 agentHeading, Vector2 agentSide, Vector2 agentPosition)
 		{
-			//create a transformation matrix
-			Matrix matTransform = Orientation(agentHeading, agentSide);
+			//create a rotation matrix
+			Matrix rotation = Orientation(agentHeading, agentSide);
 
-			//set the transformation 
-			float tx = -Vector2.Dot(agentPosition, agentHeading);
-			float ty = -Vector2.Dot(agentPosition, agentSide);
-			matTransform.M41 = tx;
-			matTransform.M42 = ty;
+			//create a translation matrix
+			Matrix translation = Matrix.CreateTranslation(-agentPosition.X, -agentPosition.Y, 0.0f);
+
+			Matrix local = translation * rotation;
 
 			//now transform the vertices
-			return matTransform.Multiply(point);
+			return local.Multiply(point);
 		}
 
 		/// <summary>
