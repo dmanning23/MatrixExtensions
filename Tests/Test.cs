@@ -371,6 +371,25 @@ namespace MatrixExtensions
 			Assert.AreEqual(100.0f, Math.Round(myPoint.X, 3));
 			Assert.AreEqual(50.0f, Math.Round(myPoint.Y, 3));
 		}
+
+		[Test]
+		public void ToWorld_Identity()
+		{
+			//create a dude
+			Vector2 dudePos = new Vector2(150.0f, 400.0f);
+			Vector2 dudeHeading = new Vector2(1.0f, 0.0f);
+			Vector2 dudeSide = new Vector2(-dudeHeading.Y, dudeHeading.X);
+
+			//convert another point to "local space"
+			Vector2 myPoint = new Vector2(250.0f, 450.0f);
+			Vector2 local = myPoint.ToLocalSpace(dudeHeading, dudeSide, dudePos);
+
+			//covert back to world space
+			Vector2 world = dudePos + local.ToWorldSpace(dudeHeading, dudeSide);
+
+			Assert.AreEqual(myPoint.X, Math.Round(world.X, 3));
+			Assert.AreEqual(myPoint.Y, Math.Round(world.Y, 3));
+		}
 	}
 }
 
