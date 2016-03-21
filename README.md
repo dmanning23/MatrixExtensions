@@ -1,4 +1,4 @@
-Matrix2
+MatrixExtensions
 =======
 
-The dirt-simple 2d matrix that is missing from XNA
+Several extension methods for the MonoGame Matrix class
