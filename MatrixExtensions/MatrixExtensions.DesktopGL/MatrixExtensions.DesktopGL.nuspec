@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>MatrixExtensions.Android</id>
+        <id>MatrixExtensions.DesktopGL</id>
         <version>1.0.4</version>
-        <title>MatrixExtensions.Android</title>
+        <title>MatrixExtensions.DesktopGL</title>
         <authors>dmanning23</authors>
 		<owners>dmanning23</owners>
 		<projectUrl>https://github.com/dmanning23/MatrixExtensions</projectUrl>
@@ -12,14 +12,14 @@
 		<description>Several extension methods for the MonoGame Matrix class</description>
 		<releaseNotes />
 		<copyright>Copyright 2016</copyright>
-		<tags>MonoGame Android</tags>
+		<tags>MonoGame DesktopGL</tags>
 		<dependencies>
-			<dependency id="MonoGame.Framework.Android" version="(3.5,)"/>
-			<dependency id="Vector2Extensions.Android" version="(1.0,)"/>
+			<dependency id="MonoGame.Framework.DesktopGL" version="(3.5,)"/>
+			<dependency id="Vector2Extensions.DesktopGL" version="(1.0,)"/>
         </dependencies>
     </metadata>
     <files>
-        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.Android\bin\Release\MatrixExtensions.Android.pdb" target="lib\MatrixExtensions.Android.pdb" />
-        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.Android\bin\Release\MatrixExtensions.Android.dll" target="lib\MatrixExtensions.Android.dll" />
+        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.DesktopGL\bin\Release\MatrixExtensions.DesktopGL.pdb" target="lib\MatrixExtensions.DesktopGL.pdb" />
+        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.DesktopGL\bin\Release\MatrixExtensions.DesktopGL.dll" target="lib\MatrixExtensions.DesktopGL.dll" />
     </files>
 </package>

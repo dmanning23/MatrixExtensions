@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>MatrixExtensions.WindowsGL</id>
-        <version>1.0.1</version>
-        <title>MatrixExtensions.WindowsGL</title>
+        <id>MatrixExtensions.iOS</id>
+        <version>1.0.4</version>
+        <title>MatrixExtensions.iOS</title>
         <authors>dmanning23</authors>
 		<owners>dmanning23</owners>
 		<projectUrl>https://github.com/dmanning23/MatrixExtensions</projectUrl>
@@ -12,13 +12,14 @@
 		<description>Several extension methods for the MonoGame Matrix class</description>
 		<releaseNotes />
 		<copyright>Copyright 2016</copyright>
-		<tags>MonoGame WindowsGL</tags>
+		<tags>MonoGame iOS</tags>
 		<dependencies>
-			<dependency id="MonoGame.Framework.WindowsGL" version="(3.5,)"/>
+			<dependency id="MonoGame.Framework.iOS" version="(3.5,)"/>
+			<dependency id="Vector2Extensions.iOS" version="(1.0,)"/>
         </dependencies>
     </metadata>
     <files>
-        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.WindowsGL\bin\Release\MatrixExtensions.WindowsGL.pdb" target="lib\MatrixExtensions.WindowsGL.pdb" />
-        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.WindowsGL\bin\Release\MatrixExtensions.WindowsGL.dll" target="lib\MatrixExtensions.WindowsGL.dll" />
+        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.iOS\bin\Release\MatrixExtensions.iOS.pdb" target="lib\MatrixExtensions.iOS.pdb" />
+        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.iOS\bin\Release\MatrixExtensions.iOS.dll" target="lib\MatrixExtensions.iOS.dll" />
     </files>
 </package>
