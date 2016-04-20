@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>MatrixExtensions.Android</id>
-        <version>1.0.4</version>
+        <version>1.0.5</version>
         <title>MatrixExtensions.Android</title>
         <authors>dmanning23</authors>
 		<owners>dmanning23</owners>
@@ -14,12 +14,13 @@
 		<copyright>Copyright 2016</copyright>
 		<tags>MonoGame Android</tags>
 		<dependencies>
-			<dependency id="MonoGame.Framework.Android" version="(3.5,)"/>
-			<dependency id="Vector2Extensions.Android" version="(1.0,)"/>
+			<dependency id="MonoGame.Framework.Android" version="3.5"/>
+			<dependency id="Vector2Extensions.Android" version="1.0"/>
+			<dependency id="RandomExtensions.dmanning23.Android" version="1.0"/>
         </dependencies>
     </metadata>
     <files>
-        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.Android\bin\Release\MatrixExtensions.Android.pdb" target="lib\MatrixExtensions.Android.pdb" />
-        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.Android\bin\Release\MatrixExtensions.Android.dll" target="lib\MatrixExtensions.Android.dll" />
+        <file src="bin\Release\MatrixExtensions.Android.pdb" target="lib\MatrixExtensions.Android.pdb" />
+        <file src="bin\Release\MatrixExtensions.Android.dll" target="lib\MatrixExtensions.Android.dll" />
     </files>
 </package>

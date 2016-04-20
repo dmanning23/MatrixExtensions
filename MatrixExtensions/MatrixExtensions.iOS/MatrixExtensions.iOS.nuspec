@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-    <metadata>
-        <id>MatrixExtensions.iOS</id>
-        <version>1.0.4</version>
-        <title>MatrixExtensions.iOS</title>
-        <authors>dmanning23</authors>
+	<metadata>
+		<id>MatrixExtensions.iOS</id>
+		<version>1.0.5</version>
+		<title>MatrixExtensions.iOS</title>
+		<authors>dmanning23</authors>
 		<owners>dmanning23</owners>
 		<projectUrl>https://github.com/dmanning23/MatrixExtensions</projectUrl>
 		<licenseUrl>https://github.com/dmanning23/MatrixExtensions/blob/master/LICENSE.txt</licenseUrl>
@@ -14,12 +14,13 @@
 		<copyright>Copyright 2016</copyright>
 		<tags>MonoGame iOS</tags>
 		<dependencies>
-			<dependency id="MonoGame.Framework.iOS" version="(3.5,)"/>
-			<dependency id="Vector2Extensions.iOS" version="(1.0,)"/>
-        </dependencies>
-    </metadata>
-    <files>
-        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.iOS\bin\Release\MatrixExtensions.iOS.pdb" target="lib\MatrixExtensions.iOS.pdb" />
-        <file src="Y:\Documents\Projects\MatrixExtensions\MatrixExtensions\MatrixExtensions.iOS\bin\Release\MatrixExtensions.iOS.dll" target="lib\MatrixExtensions.iOS.dll" />
-    </files>
+			<dependency id="MonoGame.Framework.iOS" version="3.5"/>
+			<dependency id="Vector2Extensions.iOS" version="1.0"/>
+			<dependency id="RandomExtensions.dmanning23.iOS" version="1.0"/>
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="bin\Release\MatrixExtensions.iOS.pdb" target="lib\MatrixExtensions.iOS.pdb" />
+		<file src="bin\Release\MatrixExtensions.iOS.dll" target="lib\MatrixExtensions.iOS.dll" />
+	</files>
 </package>
