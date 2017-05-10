@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixExtensions.DesktopGL", "MatrixExtensions.DesktopGL\MatrixExtensions.DesktopGL.csproj", "{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}"
 EndProject
@@ -19,7 +19,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		MatrixExtensions.nuspec = MatrixExtensions.nuspec
 	EndProjectSection
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MatrixExtensions.SharedProject", "MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.shproj", "{E8CE81AA-1AF1-4780-8DC1-7E78B7E7A5C1}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{54cc8733-f062-4211-979a-5e5baaa3db29}*SharedItemsImports = 4
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{b72df745-ccb2-459e-bfba-30626bd9bd3d}*SharedItemsImports = 4
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{bee6b956-afc2-4f5e-96fd-b6f559bdf468}*SharedItemsImports = 4
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{e8ce81aa-1af1-4780-8dc1-7e78b7e7a5c1}*SharedItemsImports = 13
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{eaee2e42-2a8d-4e4d-9588-0f1ebf94ac32}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AppStore|Any CPU = AppStore|Any CPU
 		AppStore|ARM = AppStore|ARM
@@ -107,14 +116,14 @@ Global
 		{BEE6B956-AFC2-4F5E-96FD-B6F559BDF468}.Release|x64.Build.0 = Release|Any CPU
 		{BEE6B956-AFC2-4F5E-96FD-B6F559BDF468}.Release|x86.ActiveCfg = Release|Any CPU
 		{BEE6B956-AFC2-4F5E-96FD-B6F559BDF468}.Release|x86.Build.0 = Release|Any CPU
-		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|Any CPU.ActiveCfg = AppStore|Any CPU
-		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|Any CPU.Build.0 = AppStore|Any CPU
-		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|ARM.ActiveCfg = AppStore|Any CPU
-		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|ARM.Build.0 = AppStore|Any CPU
-		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|x64.ActiveCfg = AppStore|Any CPU
-		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|x64.Build.0 = AppStore|Any CPU
-		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|x86.ActiveCfg = AppStore|Any CPU
-		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|x86.Build.0 = AppStore|Any CPU
+		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|ARM.Build.0 = Release|Any CPU
+		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|x64.ActiveCfg = Release|Any CPU
+		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|x64.Build.0 = Release|Any CPU
+		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.AppStore|x86.Build.0 = Release|Any CPU
 		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B72DF745-CCB2-459E-BFBA-30626BD9BD3D}.Debug|ARM.ActiveCfg = Debug|Any CPU
