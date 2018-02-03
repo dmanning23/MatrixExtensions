@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>MatrixExtensions</id>
-		<version>1.0.2</version>
+		<version>1.0.3</version>
 		<title>MatrixExtensions</title>
 		<authors>dmanning23</authors>
 		<owners>dmanning23</owners>
@@ -41,7 +41,7 @@
 			</group>
 
 			<group targetFramework="net451">
-				<dependency id="MonoGame.Framework.DesktopGL" version="3.5"/>
+				<dependency id="MonoGame.Framework.WindowsDX" version="3.5"/>
 				<dependency id="RandomExtensions.dmanning23" version="1.0"/>
 				<dependency id="Vector2Extensions" version="1.0.1"/>
 			</group>
@@ -62,9 +62,9 @@
 		<file src="MatrixExtensions.WindowsUniversal\bin\Release\MatrixExtensions.WindowsUniversal.pdb" target="lib\uap10.0\MatrixExtensions.WindowsUniversal.pdb" />
 		<file src="MatrixExtensions.WindowsUniversal\bin\Release\MatrixExtensions.WindowsUniversal.dll" target="lib\uap10.0\MatrixExtensions.WindowsUniversal.dll" />
 
-		<!--DesktopGL-->
-		<file src="MatrixExtensions.DesktopGL\bin\Release\MatrixExtensions.DesktopGL.pdb" target="lib\net451\MatrixExtensions.DesktopGL.pdb" />
-		<file src="MatrixExtensions.DesktopGL\bin\Release\MatrixExtensions.DesktopGL.dll" target="lib\net451\MatrixExtensions.DesktopGL.dll" />
+		<!--WindowsDX-->
+		<file src="MatrixExtensions.WindowsDX\bin\Release\MatrixExtensions.WindowsDX.pdb" target="lib\net451\MatrixExtensions.WindowsDX.pdb" />
+		<file src="MatrixExtensions.WindowsDX\bin\Release\MatrixExtensions.WindowsDX.dll" target="lib\net451\MatrixExtensions.WindowsDX.dll" />
 
 	</files>
 </package>

@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixExtensions.DesktopGL", "MatrixExtensions.DesktopGL\MatrixExtensions.DesktopGL.csproj", "{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixExtensions.Tests", "MatrixExtensions.Tests\MatrixExtensions.Tests.csproj", "{2508D3DE-A612-4F01-9ED5-6DCA40A32B2F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixExtensions.Android", "MatrixExtensions.Android\MatrixExtensions.Android.csproj", "{BEE6B956-AFC2-4F5E-96FD-B6F559BDF468}"
@@ -21,13 +19,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MatrixExtensions.SharedProject", "MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.shproj", "{E8CE81AA-1AF1-4780-8DC1-7E78B7E7A5C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixExtensions.WindowsDX", "MatrixExtensions.WindowsDX\MatrixExtensions.WindowsDX.csproj", "{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{2508d3de-a612-4f01-9ed5-6dca40a32b2f}*SharedItemsImports = 4
 		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{54cc8733-f062-4211-979a-5e5baaa3db29}*SharedItemsImports = 4
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{b499e0f8-0dde-4eb9-84fd-2ef9c27794d7}*SharedItemsImports = 4
 		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{b72df745-ccb2-459e-bfba-30626bd9bd3d}*SharedItemsImports = 4
 		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{bee6b956-afc2-4f5e-96fd-b6f559bdf468}*SharedItemsImports = 4
 		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{e8ce81aa-1af1-4780-8dc1-7e78b7e7a5c1}*SharedItemsImports = 13
-		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{eaee2e42-2a8d-4e4d-9588-0f1ebf94ac32}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AppStore|Any CPU = AppStore|Any CPU
@@ -44,30 +45,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.AppStore|Any CPU.Build.0 = Release|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.AppStore|ARM.ActiveCfg = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.AppStore|ARM.Build.0 = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.AppStore|x64.ActiveCfg = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.AppStore|x64.Build.0 = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.AppStore|x86.ActiveCfg = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.AppStore|x86.Build.0 = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Debug|ARM.Build.0 = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Debug|x64.Build.0 = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Debug|x86.Build.0 = Debug|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Release|ARM.ActiveCfg = Release|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Release|ARM.Build.0 = Release|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Release|x64.ActiveCfg = Release|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Release|x64.Build.0 = Release|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Release|x86.ActiveCfg = Release|Any CPU
-		{EAEE2E42-2A8D-4E4D-9588-0F1EBF94AC32}.Release|x86.Build.0 = Release|Any CPU
 		{2508D3DE-A612-4F01-9ED5-6DCA40A32B2F}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
 		{2508D3DE-A612-4F01-9ED5-6DCA40A32B2F}.AppStore|Any CPU.Build.0 = Release|Any CPU
 		{2508D3DE-A612-4F01-9ED5-6DCA40A32B2F}.AppStore|ARM.ActiveCfg = Debug|Any CPU
@@ -164,8 +141,35 @@ Global
 		{54CC8733-F062-4211-979A-5E5BAAA3DB29}.Release|x64.Build.0 = Release|x64
 		{54CC8733-F062-4211-979A-5E5BAAA3DB29}.Release|x86.ActiveCfg = Release|x86
 		{54CC8733-F062-4211-979A-5E5BAAA3DB29}.Release|x86.Build.0 = Release|x86
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.AppStore|ARM.Build.0 = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.AppStore|x64.ActiveCfg = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.AppStore|x64.Build.0 = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.AppStore|x86.Build.0 = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Debug|x64.Build.0 = Debug|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Debug|x86.Build.0 = Debug|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Release|ARM.Build.0 = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Release|x64.ActiveCfg = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Release|x64.Build.0 = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Release|x86.ActiveCfg = Release|Any CPU
+		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40C1D220-57BD-40B8-BC67-86D8D58C9996}
 	EndGlobalSection
 EndGlobal
