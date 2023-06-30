@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31727.386
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixExtensions.Tests", "MatrixExtensions.Tests\MatrixExtensions.Tests.csproj", "{2508D3DE-A612-4F01-9ED5-6DCA40A32B2F}"
 EndProject
@@ -12,7 +12,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{523306FE-C276-4188-BAB2-ED5B7678699A}"
 	ProjectSection(SolutionItems) = preProject
 		buildNugetPackages.ps1 = buildNugetPackages.ps1
-		MatrixExtensions.Bridge.nuspec = MatrixExtensions.Bridge.nuspec
 		MatrixExtensions.nuspec = MatrixExtensions.nuspec
 	EndProjectSection
 EndProject
@@ -20,17 +19,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MatrixExtensions.SharedProj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixExtensions.WindowsDX", "MatrixExtensions.WindowsDX\MatrixExtensions.WindowsDX.csproj", "{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixExtensions.Bridge", "MatrixExtensions.Bridge\MatrixExtensions.Bridge.csproj", "{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}"
-EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{2508d3de-a612-4f01-9ed5-6dca40a32b2f}*SharedItemsImports = 4
-		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{6f0fc1e2-cd41-45e7-bed1-e5ade306cc60}*SharedItemsImports = 4
-		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{b499e0f8-0dde-4eb9-84fd-2ef9c27794d7}*SharedItemsImports = 4
-		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{b72df745-ccb2-459e-bfba-30626bd9bd3d}*SharedItemsImports = 4
-		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{bee6b956-afc2-4f5e-96fd-b6f559bdf468}*SharedItemsImports = 4
-		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{e8ce81aa-1af1-4780-8dc1-7e78b7e7a5c1}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AppStore|Any CPU = AppStore|Any CPU
 		AppStore|ARM = AppStore|ARM
@@ -142,35 +131,18 @@ Global
 		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Release|x64.Build.0 = Release|Any CPU
 		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Release|x86.ActiveCfg = Release|Any CPU
 		{B499E0F8-0DDE-4EB9-84FD-2EF9C27794D7}.Release|x86.Build.0 = Release|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.AppStore|Any CPU.Build.0 = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.AppStore|ARM.ActiveCfg = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.AppStore|ARM.Build.0 = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.AppStore|x64.ActiveCfg = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.AppStore|x64.Build.0 = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.AppStore|x86.ActiveCfg = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.AppStore|x86.Build.0 = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Debug|ARM.Build.0 = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Debug|x64.Build.0 = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Debug|x86.Build.0 = Debug|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Release|ARM.ActiveCfg = Release|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Release|ARM.Build.0 = Release|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Release|x64.ActiveCfg = Release|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Release|x64.Build.0 = Release|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Release|x86.ActiveCfg = Release|Any CPU
-		{6F0FC1E2-CD41-45E7-BED1-E5ADE306CC60}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {40C1D220-57BD-40B8-BC67-86D8D58C9996}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{2508d3de-a612-4f01-9ed5-6dca40a32b2f}*SharedItemsImports = 4
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{b499e0f8-0dde-4eb9-84fd-2ef9c27794d7}*SharedItemsImports = 4
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{b72df745-ccb2-459e-bfba-30626bd9bd3d}*SharedItemsImports = 4
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{bee6b956-afc2-4f5e-96fd-b6f559bdf468}*SharedItemsImports = 4
+		MatrixExtensions.SharedProject\MatrixExtensions.SharedProject.projitems*{e8ce81aa-1af1-4780-8dc1-7e78b7e7a5c1}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
